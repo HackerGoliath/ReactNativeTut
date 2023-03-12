@@ -1,15 +1,17 @@
+// import libraries to create compenents
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+// create a component that return some jsx / simple function
+const App = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.textStyle}>Hello World! from React Native</Text>
     </View>
   );
 }
 
+// Create a stylesheet to style the component
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -17,4 +19,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  textStyle: {
+    color: "red",
+  }
 });
+
+// export the file so that you can use it in elsewhere in project
+export default App;
