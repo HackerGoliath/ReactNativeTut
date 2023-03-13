@@ -5,7 +5,7 @@ import ButtonDemo from './src/screens/ButtonDemo';
 // import CustomComp from './src/screens/CustomComp';
 // import FirstChallenge from './src/screens/FirstChallenge';
 // import FlatListDemo from './src/screens/FlatListDemo';
-// import Images from './src/screens/Images';
+import Images from './src/screens/Images';
 
 // create a component that return some jsx / simple function
 const App = () => {
@@ -30,10 +30,10 @@ const App = () => {
       {/* <FlatListDemo /> */}
 
       {/* Images */}
-      {/* <Images /> */}
+      <Images />
 
       {/* Buttons and TouchableOpacity */}
-      <ButtonDemo />
+      {/* <ButtonDemo /> */}
 
     </View>
   );
