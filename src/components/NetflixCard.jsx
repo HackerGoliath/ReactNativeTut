@@ -47,7 +47,9 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontFamily: "JosefinSans_400Regular",
         marginBottom: 20,
-        fontWeight: "bold"
+        fontWeight: "bold",
+        color: "red",
+        fontVariant: ['small-caps'],
     },
     poster: {
         width: 250,
@@ -61,11 +63,20 @@ const styles = StyleSheet.create({
     poster_title: {
         fontSize: 20,
         marginBottom: 10,
+        letterSpacing: 2,
+        // text-shadow : -1px 1px 10px rgba(0,0,0,0.75)
+        textShadowOffset: { width: -1, height: 1 },
+        textShadowRadius: 10,
+        textShadowColor: "rgba(0, 0, 0, 0.75)",
+        textTransform: "capitalize",
     },
     poster_text: {
         color: "#999",
         paddingHorizontal: 20,
         marginBottom: 10,
+        letterSpacing: 1,
+        lineHeight: 22,
+        textAlign: "justify",
     },
     imgStyle: {
         width: "100%",
