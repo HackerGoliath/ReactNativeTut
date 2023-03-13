@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 // import CustomComp from './src/screens/CustomComp';
 import FirstChallenge from './src/screens/FirstChallenge';
+import FlatListDemo from './src/screens/FlatListDemo';
 
 // create a component that return some jsx / simple function
 const App = () => {
@@ -21,7 +22,10 @@ const App = () => {
       {/* ==================================================================================================== */}
 
       {/* Challenge-1 Show Three Different Paragraphs */}
-      <FirstChallenge />
+      {/* <FirstChallenge /> */}
+
+      {/* FlatList */}
+      <FlatListDemo />
 
     </View>
   );
