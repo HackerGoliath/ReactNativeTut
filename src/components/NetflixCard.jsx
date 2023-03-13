@@ -1,9 +1,20 @@
 import { StyleSheet, Text, View, Image, Button, Linking } from 'react-native'
 import React from 'react'
+import { JosefinSans_400Regular } from "@expo-google-fonts/josefin-sans"
+import { useFonts } from 'expo-font'
+import AppLoading from 'expo-app-loading'
 
 const NetflixCard = () => {
+    let [fontsLoad] = useFonts({
+        JosefinSans_400Regular
+    });
+
+    if (!fontsLoad) {
+        return <AppLoading />
+    }
+
     return (
-        <View>
+        <View style={styles.container}>
             <Text style={styles.header}>Netflix Card</Text>
             <View style={styles.poster}>
                 <Image
@@ -34,7 +45,9 @@ const styles = StyleSheet.create({
     },
     header: {
         fontSize: 30,
+        fontFamily: "JosefinSans_400Regular",
         marginBottom: 20,
+        fontWeight: "bold"
     },
     poster: {
         width: 250,
