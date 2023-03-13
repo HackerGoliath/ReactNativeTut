@@ -1,11 +1,12 @@
 // import libraries to create compenents
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import ButtonDemo from './src/screens/ButtonDemo';
+import { StyleSheet, View } from 'react-native';
+import NetflixCard from './src/components/NetflixCard';
+// import ButtonDemo from './src/screens/ButtonDemo';
 // import CustomComp from './src/screens/CustomComp';
 // import FirstChallenge from './src/screens/FirstChallenge';
 // import FlatListDemo from './src/screens/FlatListDemo';
-import Images from './src/screens/Images';
+// import Images from './src/screens/Images';
+
 
 // create a component that return some jsx / simple function
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
   //   return `${fname} ${mname} ${lname}`
   // }
   return (
+    // <View>
     <View style={styles.container}>
       {/* <Text style={styles.textStyle}>Hello World! {myName} from React Native from App</Text>
       <CustomComp />
@@ -29,11 +31,14 @@ const App = () => {
       {/* FlatList */}
       {/* <FlatListDemo /> */}
 
-      {/* Images */}
-      <Images />
+      {/* Images and Props */}
+      {/* <Images /> */}
 
       {/* Buttons and TouchableOpacity */}
       {/* <ButtonDemo /> */}
+
+      {/* Card */}
+      <NetflixCard />
 
     </View>
   );
