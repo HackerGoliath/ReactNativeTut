@@ -1,6 +1,7 @@
 // import libraries to create compenents
 import { StyleSheet, View } from 'react-native';
 import NetflixCard from './src/components/NetflixCard';
+import BoxModel from './src/screens/BoxModel';
 // import ButtonDemo from './src/screens/ButtonDemo';
 // import CustomComp from './src/screens/CustomComp';
 // import FirstChallenge from './src/screens/FirstChallenge';
@@ -38,7 +39,10 @@ const App = () => {
       {/* <ButtonDemo /> */}
 
       {/* Card */}
-      <NetflixCard />
+      {/* <NetflixCard /> */}
+
+      {/* Box Model */}
+      <BoxModel />
 
     </View>
   );
