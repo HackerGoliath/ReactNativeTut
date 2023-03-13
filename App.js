@@ -32,7 +32,7 @@ const App = () => {
       {/* Images */}
       {/* <Images /> */}
 
-      {/* Buttons */}
+      {/* Buttons and TouchableOpacity */}
       <ButtonDemo />
 
     </View>

@@ -1,4 +1,4 @@
-import { Alert, Button, StyleSheet, Text, View } from 'react-native'
+import { Alert, Button, StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import React from 'react'
 
 const ButtonDemo = () => {
@@ -13,6 +13,11 @@ const ButtonDemo = () => {
                     Alert.alert("Simple Button Pressed")
                 }}
             />
+
+            <TouchableOpacity onPress={() => console.log("Touchable Opacity clicked")}>
+                <Image style={styles.imageStyle} source={require("../../assets/text1.jpeg")} />
+                <Text>Complex Button</Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -23,5 +28,9 @@ const styles = StyleSheet.create({
     textStyle: {
         fontSize: 20,
         marginVertical: 200,
+    },
+    imageStyle: {
+        width: 300,
+        height: 300,
     },
 })
