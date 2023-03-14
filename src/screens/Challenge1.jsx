@@ -1,8 +1,7 @@
 import React from 'react'
-import { View } from 'react-native-web'
-import { StyleSheet, Text } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 
-const FirstChallenge = () => {
+const Challenge1 = () => {
     const myName = "Deepak"
     return (
         <View>
@@ -23,4 +22,4 @@ const styles = StyleSheet.create({
         fontSize: 30
     },
 })
-export default FirstChallenge
+export default Challenge1
