@@ -1,6 +1,7 @@
 // import libraries to create compenents
 import { View } from 'react-native';
-import ColorGenerator from './src/Projects/ColorGenerator';
+import HookEffect from './src/screens/HookEffect';
+// import ColorGenerator from './src/Projects/ColorGenerator';
 // import CounterNumber from './src/screens/CounterNumber';
 // import Positions from './src/screens/Positions';
 // import NetflixCard from './src/components/NetflixCard';
@@ -63,7 +64,10 @@ const App = () => {
       {/* <CounterNumber /> */}
 
       {/* Project-1: Random Color Generator */}
-      <ColorGenerator />
+      {/* <ColorGenerator /> */}
+
+      {/* useEffect Hook */}
+      <HookEffect />
 
     </View>
   );
