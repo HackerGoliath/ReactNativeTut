@@ -1,9 +1,10 @@
 // import libraries to create compenents
 import { StyleSheet, View } from 'react-native';
+import Positions from './src/screens/Positions';
 // import NetflixCard from './src/components/NetflixCard';
 // import BoxModel from './src/screens/BoxModel';
 // import Challeng2SrollingEffects from './src/screens/Challeng2SrollingEffects';
-import FlexBox from './src/screens/FlexBox';
+// import FlexBox from './src/screens/FlexBox';
 // import ButtonDemo from './src/screens/ButtonDemo';
 // import CustomComp from './src/screens/CustomComp';
 // import FirstChallenge from './src/screens/FirstChallenge';
@@ -50,7 +51,10 @@ const App = () => {
       {/* <Challeng2SrollingEffects /> */}
 
       {/* FlexBox */}
-      <FlexBox />
+      {/* <FlexBox /> */}
+
+      {/* Positions */}
+      <Positions />
 
     </View>
   );
