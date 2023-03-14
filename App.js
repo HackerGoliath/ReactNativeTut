@@ -1,6 +1,7 @@
 // import libraries to create compenents
 import { StyleSheet, View } from 'react-native';
-import Positions from './src/screens/Positions';
+import CounterNumber from './src/screens/CounterNumber';
+// import Positions from './src/screens/Positions';
 // import NetflixCard from './src/components/NetflixCard';
 // import BoxModel from './src/screens/BoxModel';
 // import Challeng2SrollingEffects from './src/screens/Challeng2SrollingEffects';
@@ -54,24 +55,28 @@ const App = () => {
       {/* <FlexBox /> */}
 
       {/* Positions */}
-      <Positions />
+      {/* <Positions /> */}
+
+
+      {/* UseState Hook */}
+      <CounterNumber />
 
     </View>
   );
 }
 
 // Create a stylesheet to style the component
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  textStyle: {
-    color: "red",
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+//   textStyle: {
+//     color: "red",
+//   },
+// });
 
 // export the file so that you can use it in elsewhere in project
 export default App;
