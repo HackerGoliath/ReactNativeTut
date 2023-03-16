@@ -5,7 +5,7 @@ import { useFonts, JosefinSans_400Regular } from "@expo-google-fonts/josefin-san
 import { Montserrat_700Bold } from "@expo-google-fonts/montserrat"
 import AppLoading from 'expo-app-loading'
 
-const Contact = () => {
+const Contact = ({ navigation }) => {
     const [agree, setAgree] = useState(false)
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");
@@ -14,6 +14,7 @@ const Contact = () => {
         // return Alert.alert(userName, password)
         if (userName === "Deepak" && password === "123") {
             console.log(`Thank You ${userName} your password is ${password}`);
+            navigation.navigate("Home", { myName: `${userName}` });
         }
         else {
             console.log("Invalid Credentials");
@@ -47,6 +48,9 @@ export default Contact
 
 const styles = StyleSheet.create({
     mainContainer: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
         fontFamily: "bold",
     },
     wrapper: {

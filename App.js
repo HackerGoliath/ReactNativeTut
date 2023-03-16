@@ -1,6 +1,9 @@
 // import libraries to create compenents
 import { StyleSheet, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Contact from './src/screens/Form/Contact';
+import Home from './src/screens/Form/Home';
 // import HookEffect from './src/screens/HookEffect';
 // import ColorGenerator from './src/Projects/ColorGenerator';
 // import CounterNumber from './src/screens/CounterNumber';
@@ -18,6 +21,7 @@ import Contact from './src/screens/Form/Contact';
 
 // create a component that return some jsx / simple function
 const App = () => {
+  const Stack = createNativeStackNavigator();
   // const myName = "Deepak";
 
   // const myElement = <Text>Hello World! {myName} from React Native from element</Text>
@@ -26,54 +30,49 @@ const App = () => {
   // }
   return (
     // <View>
-    <View style={styles.container}>
-      {/* <Text style={styles.textStyle}>Hello World! {myName} from React Native from App</Text>
-      <CustomComp />
-      {myElement}
-      <Text>Hi my full name is : {getFullName("Deepak", "Bhai", "Banarasi")}</Text> */}
-      {/* ==================================================================================================== */}
+    //  <View style={styles.container}>
+    //    <Text style={styles.textStyle}>Hello World! {myName} from React Native from App</Text>
+    //   <CustomComp />
+    //   {myElement}
+    //   <Text>Hi my full name is : {getFullName("Deepak", "Bhai", "Banarasi")}</Text> 
+    //   ==================================================================================================== 
 
-      {/* Challenge-1 Show Three Different Paragraphs */}
-      {/* <FirstChallenge /> */}
+    //   Challenge-1 Show Three Different Paragraphs 
+    //   <FirstChallenge /> 
 
-      {/* FlatList */}
-      {/* <FlatListDemo /> */}
+    //     FlatList 
+    //   <FlatListDemo /> 
 
-      {/* Images and Props */}
-      {/* <Images /> */}
+    //    Images and Props 
+    //    <Images /> 
+    //  Buttons and TouchableOpacity 
+    //    <ButtonDemo /> 
+    //  Card 
+    //    <NetflixCard /> 
+    //  Box Model 
+    //    <BoxModel /> 
+    //  Challenge-2 Scrolling Effects FlatList 
+    //    <Challeng2SrollingEffects /> 
+    //  FlexBox 
+    //    <FlexBox /> 
+    //  Positions 
+    //    <Positions /> 
+    //  UseState Hook 
+    //    <CounterNumber /> 
+    //  Project-1: Random Color Generator 
+    //    <ColorGenerator /> 
+    //  useEffect Hook 
+    //    <HookEffect /> 
+    //  React Navigation v6 
+    //    Form Login 
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Login'>
+        <Stack.Screen name="Login" component={Contact} />
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
 
-      {/* Buttons and TouchableOpacity */}
-      {/* <ButtonDemo /> */}
-
-      {/* Card */}
-      {/* <NetflixCard /> */}
-
-      {/* Box Model */}
-      {/* <BoxModel /> */}
-
-      {/* Challenge-2 Scrolling Effects FlatList */}
-      {/* <Challeng2SrollingEffects /> */}
-
-      {/* FlexBox */}
-      {/* <FlexBox /> */}
-
-      {/* Positions */}
-      {/* <Positions /> */}
-
-
-      {/* UseState Hook */}
-      {/* <CounterNumber /> */}
-
-      {/* Project-1: Random Color Generator */}
-      {/* <ColorGenerator /> */}
-
-      {/* useEffect Hook */}
-      {/* <HookEffect /> */}
-
-      {/* Form Login */}
-      <Contact />
-
-    </View>
+    // </View>
   );
 }
 
