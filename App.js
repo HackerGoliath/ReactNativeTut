@@ -1,6 +1,7 @@
 // import libraries to create compenents
-import { View } from 'react-native';
-import HookEffect from './src/screens/HookEffect';
+import { StyleSheet, View } from 'react-native';
+import Contact from './src/screens/Form/Contact';
+// import HookEffect from './src/screens/HookEffect';
 // import ColorGenerator from './src/Projects/ColorGenerator';
 // import CounterNumber from './src/screens/CounterNumber';
 // import Positions from './src/screens/Positions';
@@ -24,8 +25,8 @@ const App = () => {
   //   return `${fname} ${mname} ${lname}`
   // }
   return (
-    <View>
-      {/* <View style={styles.container}> */}
+    // <View>
+    <View style={styles.container}>
       {/* <Text style={styles.textStyle}>Hello World! {myName} from React Native from App</Text>
       <CustomComp />
       {myElement}
@@ -67,24 +68,27 @@ const App = () => {
       {/* <ColorGenerator /> */}
 
       {/* useEffect Hook */}
-      <HookEffect />
+      {/* <HookEffect /> */}
+
+      {/* Form Login */}
+      <Contact />
 
     </View>
   );
 }
 
 // Create a stylesheet to style the component
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   textStyle: {
-//     color: "red",
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textStyle: {
+    color: "red",
+  },
+});
 
 // export the file so that you can use it in elsewhere in project
 export default App;
