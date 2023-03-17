@@ -7,6 +7,8 @@ import About from './src/Projects/OnlineEducationSystem/About';
 import Contact from './src/Projects/OnlineEducationSystem/Contact';
 import Course from './src/Projects/OnlineEducationSystem/Course';
 import UserData from './src/Projects/OnlineEducationSystem/UserData';
+import { useFonts } from 'expo-font';
+import AppLoading from "expo-app-loading"
 // import Contact from './src/screens/Form/Contact';
 // import Home from './src/screens/Form/Home';
 // import HookEffect from './src/screens/HookEffect';
@@ -27,6 +29,13 @@ import UserData from './src/Projects/OnlineEducationSystem/UserData';
 // create a component that return some jsx / simple function
 const App = () => {
   const Stack = createNativeStackNavigator();
+  let [fontsLoaded] = useFonts({
+    "Regular": require("./assets/fonts/Nunito-VariableFont_wght.ttf"),
+    "Main": require("./assets/fonts/JosefinSans-VariableFont_wght.ttf")
+  })
+  if (!fontsLoaded) {
+    return <AppLoading />
+  }
 
   // const myName = "Deepak";
 
@@ -84,15 +93,37 @@ const App = () => {
       <Stack.Navigator initialRouteName='Home'>
         {/* <Stack.Screen name="Home" component={Home} /> */}
         {/* Home Screen */}
-        <Stack.Screen name="Home">
+        <Stack.Screen name="Home" options={{
+          headerShown: false
+        }}>
           {(props) => <Home {...props} channelName="Deepak Technical" />}
         </Stack.Screen>
 
         {/* Course Screen */}
-        <Stack.Screen name="Course" component={Course} />
-        <Stack.Screen name="Student" component={UserData} />
-        <Stack.Screen name="About" component={About} />
-        <Stack.Screen name="Contact" component={Contact} />
+        <Stack.Screen name="Course" component={Course}
+          options={{
+            headerTitleStyle: { fontSize: 25 },
+            headerTitle: "Courses",
+            headerTitleAlign: "center",
+            fontFamily: "Regular",
+          }}
+        />
+        <Stack.Screen name="Student" component={UserData} options={{
+          headerTitleStyle: { fontSize: 25 },
+          headerTitle: "Students Data",
+          headerTitleAlign: "center",
+          fontFamily: "Regular",
+        }} />
+        <Stack.Screen name="About" component={About} options={{
+          headerTitleStyle: { fontSize: 25 },
+          headerTitleAlign: "center",
+          fontFamily: "Regular",
+        }} />
+        <Stack.Screen name="Contact" component={Contact} options={{
+          headerTitleStyle: { fontSize: 25 },
+          headerTitleAlign: "center",
+          fontFamily: "Regular",
+        }} />
 
       </Stack.Navigator>
     </NavigationContainer>
