@@ -1,6 +1,6 @@
 // import libraries to create compenents
-import { StyleSheet, View, Image, Text } from 'react-native';
-// import { NavigationContainer } from '@react-navigation/native';
+import { StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './src/Projects/OnlineEducationSystem/Home';
 // import Contact from './src/screens/Form/Contact';
@@ -23,7 +23,7 @@ import Home from './src/Projects/OnlineEducationSystem/Home';
 // create a component that return some jsx / simple function
 const App = () => {
   const Stack = createNativeStackNavigator();
-  const description = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae dolorem modi consequatur nihil quis praesentium voluptas quasi? Facilis cum, voluptas maiores iusto ipsa eos libero porro optio suscipit sint praesentium soluta culpa accusantium eaque.";
+
   // const myName = "Deepak";
 
   // const myElement = <Text>Hello World! {myName} from React Native from element</Text>
@@ -76,22 +76,14 @@ const App = () => {
 
 
     // Project: Online Education System
-    <View style={styles.mainContainer}>
-      <View style={styles.homeTop}>
-        <Image style={styles.headerImage}
-          resizeMode="contain"
-          source={require('./assets/logo.jpg')} />
-        <Text style={styles.mainHeader}>Welcome to</Text>
-        <Text style={[styles.mainHeader,
-        {
-          fontSize: 33,
-          color: "#4c5dab",
-          marginTop: 0,
-        },
-        ]}>Deepak Technical</Text>
-        <Text style={styles.paraStyle}>{description}</Text>
-      </View>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Home'>
+        {/* <Stack.Screen name="Home" component={Home} /> */}
+        <Stack.Screen name="Home">
+          {(props) => <Home {...props} channelName="Deepak Technical" />}
+        </Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
 
     // </View>
   );
@@ -108,43 +100,6 @@ const styles = StyleSheet.create({
   // textStyle: {
   //   color: "red",
   // },
-
-
-  // Project Style:
-  mainContainer: {
-    flex: 1,
-    height: "100%",
-    justifyContent: "space-between",
-    paddingHorizontal: 20,
-    backgroundColor: "#fff",
-    textAlign: "center",
-  },
-  homeTop: {
-    flex: 1,
-    // justifyContent: "center",
-    alignItems: "center",
-    paddingHorizontal: 10,
-  },
-  headerImage: {
-    height: undefined,
-    width: "100%",
-    aspectRatio: 1,
-    borderRadius: 20,
-    marginTop: 50,
-  },
-  mainHeader: {
-    fontSize: 30,
-    color: "#344055",
-    textTransform: "uppercase",
-  },
-  paraStyle: {
-    textAlign: "left",
-    fontSize: 19,
-    color: "#7d7d7d",
-    marginTop: 30,
-    paddingBottom: 50,
-    lineHeight: 26,
-  },
 });
 
 // export the file so that you can use it in elsewhere in project
