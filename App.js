@@ -3,6 +3,10 @@ import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './src/Projects/OnlineEducationSystem/Home';
+import About from './src/Projects/OnlineEducationSystem/About';
+import Contact from './src/Projects/OnlineEducationSystem/Contact';
+import Course from './src/Projects/OnlineEducationSystem/Course';
+import UserData from './src/Projects/OnlineEducationSystem/UserData';
 // import Contact from './src/screens/Form/Contact';
 // import Home from './src/screens/Form/Home';
 // import HookEffect from './src/screens/HookEffect';
@@ -79,9 +83,17 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Home'>
         {/* <Stack.Screen name="Home" component={Home} /> */}
+        {/* Home Screen */}
         <Stack.Screen name="Home">
           {(props) => <Home {...props} channelName="Deepak Technical" />}
         </Stack.Screen>
+
+        {/* Course Screen */}
+        <Stack.Screen name="Course" component={Course} />
+        <Stack.Screen name="Student" component={UserData} />
+        <Stack.Screen name="About" component={About} />
+        <Stack.Screen name="Contact" component={Contact} />
+
       </Stack.Navigator>
     </NavigationContainer>
 

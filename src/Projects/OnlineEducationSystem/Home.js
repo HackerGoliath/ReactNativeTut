@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
+import Menu from './components/Menu';
 
 const Home = (props) => {
     const description = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae dolorem modi consequatur nihil quis praesentium voluptas quasi? Facilis cum, voluptas maiores iusto ipsa eos libero porro optio suscipit sint praesentium soluta culpa accusantium eaque.";
@@ -18,6 +19,13 @@ const Home = (props) => {
                 },
                 ]}>{props.channelName}</Text>
                 <Text style={styles.paraStyle}>{description}</Text>
+            </View>
+            <View>
+                <View style={styles.menuStyle}>
+                    <View style={styles.lineStyle}></View>
+                    <Menu />
+                    <View style={[styles.lineStyle, { marginVertical: 20 }]}></View>
+                </View>
             </View>
         </View>
     )
@@ -59,6 +67,11 @@ const styles = StyleSheet.create({
         paddingBottom: 50,
         lineHeight: 26,
     },
+    lineStyle: {
+        marginBottom: 20,
+        borderWidth: 0.5,
+        borderColor: "grey",
+    }
 })
 
 export default Home
