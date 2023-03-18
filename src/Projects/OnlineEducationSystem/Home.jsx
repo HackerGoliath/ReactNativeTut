@@ -60,6 +60,8 @@ const styles = StyleSheet.create({
         fontSize: 30,
         color: "#344055",
         textTransform: "uppercase",
+        fontFamily: "Regular",
+        fontWeight: 600,
     },
     paraStyle: {
         textAlign: "left",
@@ -68,6 +70,8 @@ const styles = StyleSheet.create({
         marginTop: 30,
         paddingBottom: 50,
         lineHeight: 26,
+        fontFamily: "Main",
+        fontWeight: 400,
     },
     lineStyle: {
         marginBottom: 10,
