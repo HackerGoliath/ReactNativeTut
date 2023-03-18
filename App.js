@@ -90,7 +90,7 @@ const App = () => {
 
     // Project: Online Education System
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
+      <Stack.Navigator initialRouteName='Contact'>
         {/* <Stack.Screen name="Home" component={Home} /> */}
         {/* Home Screen */}
         <Stack.Screen name="Home" options={{
